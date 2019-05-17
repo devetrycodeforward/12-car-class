@@ -6,12 +6,12 @@ class Car:
         return self.gas_level
 
     def add_gas(self, x):
-        new_gaslevel = x + gas_level
+        new_gaslevel = x + self.gas_level
         return new_gaslevel
     
-    def fill_up(self, y):
-        if y < 13:
-            new_y = 13- y
+    def fill_up(self):
+        if self.gas_level < 13:
+            new_y = 13- self.gas_level
             return new_y
         else: 
             return 0
